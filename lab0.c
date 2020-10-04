@@ -1,13 +1,20 @@
-# include <stdio.h>
+#include <stdio.h>
 
 int main()
 {
-	int a, b;
+	float a, b, c;
 	printf("Input a ");
-	scanf("%d", &a);
+	scanf("%f", &a);
 	printf("Input b ");
-	scanf("%d", &b);
-	int c = a + b;
-	printf("%d + %d = %d\n", a, b, c);
+	scanf("%f", &b);
+	printf("Input c ");
+	scanf("%f", &c);
+	float d = a / (b + c);
+	if (b + c == 0) {
+		printf("Incorrect operation");
+	}
+	else {
+		printf("%f / (%f + %f) = %f\n", a, b, c, d);
+	}
 	return 0;
 }
